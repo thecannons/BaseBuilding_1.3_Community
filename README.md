@@ -146,7 +146,7 @@ I recommend not modifying this and you must have permission from [**W4rGo**](htt
 
 <br><br>
 ##CREDITS:
-
+- 1.3 Revisions by Kham(rosska85 and SeaWeeduk) <br>
 - [**Simple bomb script by Igneous01**](http://forums.bistudio.com/showthread.php?123621-Simple-Bomb-defusal-with-keypad):
 - [**W4rGo**](https://github.com/w4rgo) for his excellent Build Recipe Menu Dialog
 - Operational Gates by Humbleuk and Killzone Kid modified <br>
