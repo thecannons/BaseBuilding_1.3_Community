@@ -1,0 +1,2 @@
+1 "" !="this enableSimulation false;this allowDammage false;this disableAI 'FSM';this disableAI 'ANIM';this disableAI 'MOVE';" !"\"_this spawn fnc_plyrHit;\"" !"\"Hit\" 3:5 Survivor2_DZ - \"_this spawn fnc_plyrHit;\""
+

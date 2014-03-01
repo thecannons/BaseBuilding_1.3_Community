@@ -1,0 +1,139 @@
+All of these edits are to be made in the dayz_mission.pbo (mission file name may vary)
+
+****STEP 1 (Copying Files)****
+
+First, unpack your mission file.
+Now from the Base Building zip\dayz.mission\, copy over the following
+buildRecipeBook 				(Folder)
+dayz_code						(Folder)
+REsec							(Folder)
+build_recipe_dialog.hpp			(File)
+build_recipe_dialog_list.hpp	(File)
+defines.hpp						(File)
+
+****STEP 2 (Modifying init.sqf)****
+**A**
+Find
+
+progressLoadingScreen 0.1;
+
+Directly ABOVE that, add (This placement is VERY important, if you don't load it at this point you may not be able to connect to the server)
+
+call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";							//Initializes custom variables
+
+**B**
+Find
+
+progressLoadingScreen 1.0;
+	
+Directly ABOVE that, add
+
+call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";							//Compile custom compiles
+call compile preprocessFileLineNumbers "dayz_code\init\settings.sqf";							//Initialize custom clientside settings
+
+**C**
+If you use RESec find (if you don't use it, you can skip this step and delete the REsec folder)
+
+#include "\z\addons\dayz_code\system\REsec.sqf"
+
+And change it to
+
+#include "REsec\REsec.sqf"
+
+	
+Save and close
+
+****STEP 3 (Modifying description.ext)****
+**A**
+At the very top of the file, add
+
+//####----####---- Base Building Start ----####----####
+#include "defines.hpp"
+#include "build_recipe_dialog.hpp"
+#include "build_recipe_list_dialog.hpp"
+//####----####---- Base Building End ----####----####
+
+**B**
+Then, remove ALL of this
+
+###REMOVE START###
+class RscText
+{
+	type = 0;
+	idc = -1;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0x100; 
+	font = Zeppelin32;
+	SizeEx = 0.03921;
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0, 0, 0, 0};
+	linespacing = 1;
+};
+class RscPicture
+{
+	access=0;
+	type=0;
+	idc=-1;
+	style=48;
+	colorBackground[]={0,0,0,0};
+	colorText[]={1,1,1,1};
+	font="TahomaB";
+	sizeEx=0;
+	lineSpacing=0;
+	text="";
+};
+class RscLoadingText : RscText
+{
+	style = 2;
+	x = 0.323532;
+	y = 0.666672;
+	w = 0.352944;
+	h = 0.039216;
+	sizeEx = 0.03921;
+	colorText[] = {0.543,0.5742,0.4102,1.0};
+};
+class RscProgress
+{
+	x = 0.344;
+	y = 0.619;
+	w = 0.313726;
+	h = 0.0261438;
+	texture = "\ca\ui\data\loadscreen_progressbar_ca.paa";
+	colorFrame[] = {0,0,0,0};
+	colorBar[] = {1,1,1,1};
+};
+class RscProgressNotFreeze
+{
+	idc = -1;
+	type = 45;
+	style = 0;
+	x = 0.022059;
+	y = 0.911772;
+	w = 0.029412;
+	h = 0.039216;
+	texture = "#(argb,8,8,3)color(0,0,0,0)";
+};
+###REMOVE END####
+
+Save and close
+
+****STEP 4 (Modifying fn_selfActions.sqf)****
+If you do NOT already have a custom fn_selfActions.sqf, skip this step.
+
+If you DO already have a custom fn_selfActions.sqf, refer to the fn_selfActions ReadMe for instructions.
+Then open dayz_mission\dayz_code\init\compiles.sqf
+Find this and delete it
+//Custom Self Actions File
+fnc_usec_selfActions = compile preprocessFileLineNumbers "dayz_code\compile\fn_selfActions.sqf";
+
+Save and Close
+
+****STEP 5 (player_build2.sqf)****
+If you would like base building to ignore combat checks and not place players into combat when they finish building, skip this step.
+
+If you would prefer base building to place players into combat upon completion or cancelling a build, delete player_build2.sqf and rename player_build2 - Combat System to player_build2.sqf
+
+****Now refer to Epoch 1.0.3.1 DayZ_Server ReadMe.txt****

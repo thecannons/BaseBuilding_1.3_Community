@@ -1,0 +1,51 @@
+//################### Base Building 1.3 ##############################
+
+**Lines marked with // tell you what line to add the exceptions to, do not just comment these lines out!!**
+
+createvehicle.txt
+
+	//5 "B_"
+		!"Land_CamoNetB_EAST" !"Land_CamoNetB_NATO"
+		
+	//5 "5 "Nest_"
+		!"Land_fortified_nest_big" !"Land_fortified_nest_small"
+		
+	//5 "Fort_"
+		!"Fort_RazorWire" !"Land_fort_bagfence_long" !"Land_Fort_Watchtower" !"Land_fort_rampart_EP1"
+		
+	//5 "_SH"
+		!"Land_Ind_Shed_01_main"
+
+publicvariable.txt
+
+	//5 !="remExField"
+		!"dayz_updateNearbyObjects"
+		
+publicvariableval.txt
+
+	//5 "hideObject"
+		!"\"hideObject\""
+		
+	//5 bis_
+		!"FlagCarrierBIS_EP1"
+		
+setpos.txt
+
+	//5 ""
+		!"Concrete_Wall_EP1"
+		
+setvariable.txt
+
+	//5 !"USEC_"
+		!"startcombattimer" !"authorizeduid" !"inmotion" !"gatelowered" !"rooflowered" !"isbomb"
+
+mpeventhandler.txt
+		
+		//5 ""
+			Changed to a 1 for now because the exception I added didn't work
+			
+remoteexec.txt
+
+		//5 ""
+			Also changed to a 1 for now because the exception I added didn't work
+			

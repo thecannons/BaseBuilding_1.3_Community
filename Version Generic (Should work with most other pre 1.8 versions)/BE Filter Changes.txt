@@ -1,0 +1,62 @@
+//################### Base Building 1.3 ##############################
+
+**Lines marked with // tell you what line to add the exceptions to, do not just comment these lines out!!**
+
+createvehicle.txt
+
+	//5 "B_"
+		!"Land_CamoNetB_EAST" !"Land_CamoNetB_NATO"
+		
+	//5 "Nest_"
+		!"Land_fortified_nest_big" !"Land_fortified_nest_small"
+		
+	//5 "Fort_"
+		!"Fort_RazorWire" !"Land_fort_bagfence_long" !"Land_Fort_Watchtower" !"Land_fort_rampart_EP1"
+		
+	//5 "_SH"
+		!"Land_Ind_Shed_01_main"
+	
+	//5 "Land_"
+		!"Land_fortified_nest_big" !"Land_Fort_Watchtower" !"Land_fort_rampart_EP1" !"Land_HBarrier_large" !"Land_fortified_nest_small" !"Land_BagFenceRound" !"Land_fort_bagfence_long" !"Land_Misc_Cargo2E" !"Land_pumpa" !"Land_CncBlock" !"Land_prebehlavka" !"Land_tent_east" !"Land_CamoNetB_EAST" !"Land_CamoNetB_NATO" !"Land_CamoNetVar_EAST" !"Land_CamoNetVar_NATO" !"Land_CamoNet_EAST" !"Land_CamoNet_NATO" !"Land_sara_hasic_zbroj" !"Land_Shed_wooden" !"Land_Barrack2" !"Land_vez" !"Land_Ind_Shed_01_main" !"Land_Fire_barrel" !"Land_WoodenRamp" !"Land_Ind_TankSmall2_EP1" !"Land_Ind_IlluminantTower" !"Land_A_Castle_Stairs_A" !"Land_A_Castle_Gate" !"Land_House_L_1_EP1" !"Land_ConcreteRamp" !"Land_Campfire" !"Land_ladder" !"Land_ladder_half" !"Land_Misc_Scaffolding"
+		
+publicvariable.txt
+
+	//5 ""
+		!"dayz_updateNearbyObjects"
+	
+	//5 "remExFP"
+		Change this to a 1. Not the best solution but can't get a working filter at this point. 
+		
+publicvariableval.txt
+
+	//1 "hide"
+		!"\"hideObject\""
+		
+	//5 "hideObject"
+		!"\"hideObject\""
+		
+	//1 "BIS_"
+		!"FlagCarrierBIS_EP1"
+		
+	//5 bis_
+		!"FlagCarrierBIS_EP1"
+		
+setpos.txt
+
+	//5 ""
+		!"Concrete_Wall_EP1"
+		
+setvariable.txt
+
+	//5 ""
+		!"startcombattimer" !"authorizeduid" !"inmotion" !"gatelowered" !"rooflowered" !"isbomb"
+		
+scripts.txt
+
+	//5 gau
+		!"s_player_addFlagAuth" !"s_player_removeFlagAuth"
+
+	//5 createVehicle
+		!"_detonate = \"grenade\" createVehicle _pos;" !"_object = createVehicle [_classname, _location, [], 0, \"NONE\"];"
+		
+****Now follow the instructions for updating your SQL Database****

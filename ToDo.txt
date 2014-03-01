@@ -1,0 +1,126 @@
+Things to Do
+//----------------------- Still Need Looked At --------------------
+
+//------------------ Would Be Nice ------------------------
+
+//General
+Master handler for custom debug spawner
+Prevent lost items if people remove a build with a full inventory
+Display radius for item controls on menu options
+
+//-------------------------- DONE --------------------------
+
+//Change hint windows to something more appealing
+enterCodeAdd.sqf (Done)
+enterCodeRemove.sqf (Done)
+add_UIDCode.sqf (Done)
+remove_UIDCode.sqf (Done)
+give_gateAccess.sqf (Done)
+
+//Player_build2.sqf
+May not need seperate sections for building placement section? (Done)
+Loop the animation so people are aware they are still building. (Done)
+Restrict placement for traps (Done)
+Restrict gear access until items are removed from inventory (Done)
+
+//Excessive Movement on some objects, add individual placement handlers
+Land_sara_hasic_zbroj (Done)
+warfareBCamp (Changed stating direction as it only moves when facing one direction relative to player)
+Land_fort_rampart_EP1 (Changed stating direction as it only moves when facing one direction relative to player)
+ZavoraAnim (Changed stating direction as it only moves when facing one direction relative to player)
+Fence_Ind_Long (Done)
+Fort_razorWire (Done)
+Land_shed_wooden (Done)
+Land_vez (Done)
+Land_Misc_Scaffolding (Done)
+
+//fn_selfActions.sqf
+Revise some of the options so they are neater (Done)
+Prevent removal options showing for map objects, otherwise these could be used for item farming (Done)
+
+//Flag change
+Change flag to something less specific, since we're not all American (Done)
+
+//Build List
+Merge into file (Done)
+Majority of items set to not be removable for some reason. (Done)
+Some items move considerably after clicking finish (Added fixes for the worst culprits)
+Check attach coords for all items, some items are clipping into the ground or place too close to the player (Not really required)
+Castle walls!!!! (Done)
+
+//player_build.sqf
+Stop people being able to build standard tank traps, sand bag walls, wire fences, or camo nets with 1.8+. (Done)
+
+//Removal
+Address problem with removing extendable objects. You can't remove things unless you can target them with the cursor. (Think this is ok, since we have castle stairs and scaffolding to use for height)
+
+//Backwards Compatibility
+Create duplicate files and change public variables, build list requirements etc to pre 1.8 (Done, Generic Version)
+
+//Sarge AI
+Setup a master variable to enable/disable all AI functionality and control options (Done)
+Test with new array system to make sure it still works as intended (Daimyo's Sarge install is very customized, can't make heads or tails of it) (DONE!!!!)
+
+//ReadMe + Install Stuff
+Put together a readme for 1.8 (Done)
+Put together a readme for older versions (Done)
+Put together a readme for Epoch (Done)
+Alter generic version readme to explain how to add keybinds from compiles.sqf (Done)
+Provide 'new install' and 'update install' SQL scripts to avoid deployable IDs being changed (Done)
+Combine the 'update install' DB additions with the 'update to 1.3' script so they still only have one script to run (Done)
+Hive SQL scripts still need sorted (Done)
+Put together a readme for Overwatch (Done)
+Add new flag types to SQL scripts (Done)
+Force Z coordinate to 0 in SQL update scrips (Done)
+Configuration ReadMe with better breakdown of what each variable does (Done)
+Edit the ReadMe files to include note for @Reality update scripts, people will need to check deployable ID range matches. Also, @Hive users will need to edit classnames if they've edited the build list. (Done)
+
+//ReadMe Optional Stuff
+Sarge AI addon instructions (Done)
+Custom Debug addon instructions (Done)
+Add optional readme for IF statement in player_spawnCheck.sqf to disable loot (or both loot and zombie) spawns at base build objects (Done)
+
+//Build List
+Check all new 1.8 items as they don't seem to be registering (Done)
+Add replacements for old buildables: tank traps, sand bag walls, wire fences, (and CamoNets 1.8 only) (Done)
+Finalise recipes and build items (Done)
+Town restrictions for Chernarus (Done)
+
+//General
+Fix Flag count check (Done)
+Fix Map Markers (Done)
+Camo Net removal option not showing (Done)
+Check extendables floating when loading from previous version (Done)
+Possibly add a variable to alter the number of flags a person can have, just to make it easier for people to change (Done)
+Check for custom debug monitor and toggle it off/on before and after hint displays (Done)
+Provide more power for admins, like the ability to add/remove UIDs from objects they aren't assigned to (Done)
+Give option to add/remove UIDs from camonets? (Done)
+Overhaul system for items that can't be targeted. (Done)
+Add a master variable for flag radius (Done)
+Remove option still exists whilst removing, may lead to duping (Done)
+Add Master Variable for flag type, we'll also need server_monitor to update any flag type to the current flag type to prevent issues (Done)
+Can remove flag even when there are items in range (Done)
+Tidy up server_monitor.sqf (Done)
+Look at give_gateAccess.sqf, it looks a bit strange, also need to allow Admins to use the function (Done)
+Add option to reposition object after selecting finish (Done)
+AntiHack blocks rHideObject (Sorted)
+Check why hint windows sometimes close too fast ALSO some hint windows don't appear to be displaying and the script is ignoring sleep commands, notably addUID (Done)
+Graves don't appear to damage the player but it does damage other surrounding items (Done, May need reverted for previous versions of DayZ)
+Set up a toggleable zombie shield (Range 50 meters, set special build rule to restrict it to (flagradius - 50), also create a master variable to allow admins to disable the functionality) (Done)
+Tidy up editable settings in variables.sqf (Done)
+Disarm option for graves? (Done)
+Build Help is only displaying first line (Fixed)
+Tower lighting working without generator nearby (Fixed)
+Build_help hintC format is unfamiliar and we want to replace 200 with BBFlagRadius variable (Currently cheated and just said "flag radius" instead of an actual distance) (Done)
+Operate single gate, priority 6 colour yellow, auto highlight (Done)
+Options for gates toggle, roof toggle etc set to 6 and yellow (Done)
+Lights sub menu (Done)
+Buildings generate loot during the build process. Perhaps assign an owner ID when it's created just to prevent that. (Done)
+
+//Minor RPT Spam
+Client side RPT spam when building flags, due to it knowing you're in range of a flag, but it can't find the inventory array as the object hasn't been published (Done)
+Client side RPT spam when building targetable objects for same reason (Done)
+
+//Lighting
+Try to implement toggle tower lights with generator (Done)
+Make toggle function only work with lights that are owned by somebody (not map lights) (Done)
