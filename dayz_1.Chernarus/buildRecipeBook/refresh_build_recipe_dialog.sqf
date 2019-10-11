@@ -1,24 +1,24 @@
 ﻿_recipe = allBuildables select currentBuildRecipe;
 
-_requeriments = [];
+_requirements = [];
 _classname = "";
 
-_requeriments  = _recipe select 0;
+_requirements  = _recipe select 0;
 _classname = _recipe select 1;
 
-//Select the requeriments of materials
-_recipeQtyT= _requeriments select 0;
-_recipeQtyS= _requeriments select 1;
-_recipeQtyW= _requeriments select 2;
-_recipeQtyL= _requeriments select 3;
-_recipeQtyM= _requeriments select 4;
-_recipeQtyG= _requeriments select 5;
-_recipeQtyE= _requeriments select 6;
-_recipeQtyCr= _requeriments select 7;
-_recipeQtyC= _requeriments select 8;
-_recipeQtyB= _requeriments select 9;
-_recipeQtySt= _requeriments select 10;
-_recipeQtyDT= _requeriments select 11;
+//Select the requirements of materials
+_recipeQtyT= _requirements select 0;
+_recipeQtyS= _requirements select 1;
+_recipeQtyW= _requirements select 2;
+_recipeQtyL= _requirements select 3;
+_recipeQtyM= _requirements select 4;
+_recipeQtyG= _requirements select 5;
+_recipeQtyE= _requirements select 6;
+_recipeQtyCr= _requirements select 7;
+_recipeQtyC= _requirements select 8;
+_recipeQtyB= _requirements select 9;
+_recipeQtySt= _requirements select 10;
+_recipeQtyDT= _requirements select 11;
 
 
 // Count mags in player inventory and add to an array
